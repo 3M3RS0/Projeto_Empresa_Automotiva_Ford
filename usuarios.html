@@ -5,6 +5,18 @@
     <title>Cadastro de Usuários - Ford</title>
     <link rel="icon" href="img/Ford_Logo.png.png" type="image/png">
     <link rel="stylesheet" href="estilo/style.css">
+    <script>
+        // Função de confirmação ao apagar
+        function confirmarExclusao(nomeUsuario) {
+            let confirmado = confirm("Tem certeza que deseja excluir: " + nomeUsuario + "?");
+
+            if (confirmado) {
+                alert("Usuario " + nomeUsuario + " excluído com sucesso!");
+            } else {
+                alert("Ação cancelada.");
+            }
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -15,6 +27,7 @@
     <nav>
         <a href="principal.html">Início</a>
         <a href="usuarios.html">Cadastro de Usuários</a>
+        <a href="itens.html">Cadastro de Itens</a>
         <a href="index.html">Sair</a>
     </nav>
 
@@ -62,7 +75,7 @@
                     <td>Profissional RH</td>
                     <td>
                         <button>Editar</button>
-                        <button>Excluir</button>
+                        <button onclick="confirmarExclusao('Profissional RH')">Excluir</button>
                     </td>
                 </tr>
                 <tr>
@@ -70,8 +83,8 @@
                     <td>najeh@ford.com</td>
                     <td>Marketing</td>
                     <td>
-                        <button>Editar</button>
-                        <button>Excluir</button>
+                      <button>Editar</button>
+                      <button onclick="confirmarExclusao('Marketing')">Excluir</button>
                     </td>
                 </tr>
                 <tr>
@@ -80,7 +93,7 @@
                     <td>Engenheiro</td>
                     <td>
                         <button>Editar</button>
-                        <button>Excluir</button>
+                        <button onclick="confirmarExclusao('Engenheiro')">Excluir</button>
                     </td>
                 </tr>
             </tbody>
