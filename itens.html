@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastro de Itens - Ford</title>
+    <link rel="icon" href="img/Ford_Logo.png.png" type="image/png">
+    <link rel="stylesheet" href="estilo/style.css">
+
+    <script>
+        // Função de confirmação ao apagar
+        function confirmarExclusao(nomeItem) {
+            let confirmado = confirm("Tem certeza que deseja excluir: " + nomeItem + "?");
+
+            if (confirmado) {
+                alert("Item " + nomeItem + " excluído com sucesso!");
+            } else {
+                alert("Ação cancelada.");
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <img src="img/Ford_Logo.png.png" alt="Logo Ford" class="logo">
+        <h1>Cadastro de Itens - Ford</h1>
+    </header>
+
+    <nav>
+        <a href="principal.html">Início</a>
+        <a href="usuarios.html">Cadastro de Usuários</a>
+        <a href="itens.html">Cadastro de Itens</a>
+        <a href="index.html">Sair</a>
+    </nav>
+
+    <div class="container">
+        
+        <h2>Formulário de Cadastro / Edição</h2>
+
+        <form>
+            <label for="nome">Nome do Item:</label>
+            <input type="text" id="nome" required>
+
+            <label for="categoria">Categoria:</label>
+            <input type="text" id="categoria" required>
+
+            <label for="valor">Valor (R$):</label>
+            <input type="text" id="valor" required>
+
+            <button type="submit">Salvar</button>
+        </form>
+
+        <h2>Lista de Itens Cadastrados</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Categoria</th>
+                    <th>Valor</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Filtro de Ar</td>
+                    <td>Peças</td>
+                    <td>45,90</td>
+                    <td>
+                        <button>Editar</button>
+                        <button onclick="confirmarExclusao('Filtro de Ar')">Apagar</button>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Óleo Sintético</td>
+                    <td>Lubrificantes</td>
+                    <td>79,50</td>
+                    <td>
+                        <button>Editar</button>
+                        <button onclick="confirmarExclusao('Óleo Sintético')">Apagar</button>
+                    </td>
+                <tr>
+                    <td>Pneu Aro 13</td>
+                    <td>Acessório</td>
+                    <td>350,00</td>
+                    <td>
+                        <button>Editar</button>
+                        <button onclick="confirmarExclusao('Pneu Aro 13')">Apagar</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+</body>
+</html>
