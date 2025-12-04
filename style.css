@@ -89,3 +89,9 @@ th {
     display: block;
     margin: 0 auto 10px;  /* centraliza e dá espaçamento */
 }
+.FotoSistema {
+    width: 720px;         /* tamanho da imagem */
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;  /* centraliza e dá espaçamento */
+}
